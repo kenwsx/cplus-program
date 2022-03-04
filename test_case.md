@@ -1,11 +1,8 @@
-4
+16
 A recessive
 B dominant
 A C
 B C
-
-
-
 D recessive
 C E
 D E

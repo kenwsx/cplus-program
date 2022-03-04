@@ -1,4 +1,11 @@
-L 2
-E 1
-H 1
-O 1
+A recessive
+B dominant
+C dominant
+D recessive
+E dominant
+F non-existent
+G recessive
+H non-existent
+I non-existent
+J non-existent
+K non-existent

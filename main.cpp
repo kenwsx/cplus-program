@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdio>
 
 class Person {
 public:
@@ -88,6 +89,7 @@ void Person::print_data()
 }
 
 /*void Person::print_data() //debug version
+   <<<<<<< HEAD
    {
         std::cout << "Name:" << this->name << '\n';
         std::cout << "Gene_type:" << this->gene_type << '\n';
@@ -103,7 +105,8 @@ bool compare_name(Person a, Person b)
 
 int main(){
 
-	fopen
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
 	class Person data[3100];
 	int data_num = 0, data_counter = 0; //num為總數，counter為目前數目
 	std::cin >> data_num;
@@ -118,6 +121,7 @@ int main(){
 			data[data_counter-1].define_gene();
 
 	}
+
 
 	for(int i = 0; i < data_counter; i++)
 	{
