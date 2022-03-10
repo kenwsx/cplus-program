@@ -1,11 +1,29 @@
-A recessive
-B dominant
-C dominant
-D recessive
-E dominant
-F non-existent
-G recessive
-H non-existent
-I non-existent
-J non-existent
-K non-existent
+Not found:1
+Not found: 
+Not found:+
+counter:3
+max:-1
+Not found: 
+Not found:+
+counter:2
+max:3
+Not found:+
+Not found: 
+Not found:2
+counter:3
+max:3
+Not found: 
+Not found:2
+counter:2
+max:3
+Not found:2
+Not found: 
+Not found:=
+Not found:3
+counter:4
+max:4
+Not found:=
+Not found:3
+counter:2
+max:4
+4
