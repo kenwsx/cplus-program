@@ -1,3 +1,4 @@
+//參考：https://en.wikipedia.org/wiki/Line–line_intersection#cite_note-GGIII-2
 #include <cmath>
 #include <iostream>
 
@@ -33,22 +34,14 @@ int y;
 class Segment // using two Coordinate to represent a segment
 {
 public:
-/*Segment(Coordinate input_a, Coordinate input_b)
+Segment(Coordinate input_a, Coordinate input_b)
    {
-      this->a.setX(input_a.getX());
-      this->a.setY(input_a.getY());
+      a.setX(input_a.getX());
+      a.setY(input_a.getY());
 
-      this->b.setX(input_b.getX());
-      this->b.setY(input_b.getY());
-   }*/
-Segment(Coordinate &input_a, Coordinate &input_b)
-{
-	a.setX(input_a.getX());
-	a.setY(input_a.getY());
-
-	b.setX(input_b.getX());
-	b.setY(input_b.getY());
-}
+      b.setX(input_b.getX());
+      b.setY(input_b.getY());
+   }
 
 // return the intersection with another segment if exist, return NULL when there are no intersection.
 Coordinate *getIntersection(Segment s)
