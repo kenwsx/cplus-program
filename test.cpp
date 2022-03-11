@@ -1,22 +1,28 @@
 #include <iostream>
-#include <string>
+#include <stdio.h>
+using namespace std;
 
-class container
-{
-	container(void): box(nullptr), len(0), index(0){};
+class Test {
 public:
+    Test() {}
+    Test(const Test& t)
+    {
+        cout << "Copy constructor called " << endl;
+    }
 
-
-private:
-	int *box{};
-	int len{};
-	int index{};
+    Test& operator=(const Test& t)
+    {
+        cout << "Assignment operator called " << endl;
+        return *this;
+    }
 };
 
-int main(){
-	std::string a, b;
-	std::cin >> a >> b;
-
-	std::cout << a + b << '\n';
-	//std::cout << a << '\n';
+// Driver code
+int main()
+{
+    Test t1, t2;
+    t2 = t1;
+    Test t3 = t1;
+    getchar();
+    return 0;
 }

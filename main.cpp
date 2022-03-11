@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <cstdio>
+//#include <cstdio>
 
 class Person {
 public:
@@ -47,7 +47,7 @@ void add_data(std::string input_name, std::string input_str, Person *data, int *
 
 		for(int i = 0; i <= *data_count; i++)               //default the last one is empty
 		{
-			if(data[i].name == input_str || i == *data_count)
+			if(data[i].name == input_str || i == *data_count) //新增第一次or第二次小孩
 			{
 				data[i].name = input_str;
 				data[i].parent[data[i].parent_count] = buf;
@@ -56,7 +56,7 @@ void add_data(std::string input_name, std::string input_str, Person *data, int *
 				//std::cout << "Child is:" << data[i].name << " Parent is:"
 				//          << (data[i].parent[data[i].parent_count-1])->name <<'\n';
 
-				if(i != *data_count)
+				if(i != *data_count) //新的小孩
 					return;
 			}
 		}
@@ -89,7 +89,6 @@ void Person::print_data()
 }
 
 /*void Person::print_data() //debug version
-   <<<<<<< HEAD
    {
         std::cout << "Name:" << this->name << '\n';
         std::cout << "Gene_type:" << this->gene_type << '\n';
@@ -105,10 +104,10 @@ bool compare_name(Person a, Person b)
 
 int main(){
 
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+	//freopen("input.txt", "r", stdin);
+	//freopen("output.txt", "w", stdout);
 	class Person data[3100];
-	int data_num = 0, data_counter = 0; //num為總數，counter為目前數目
+	int data_num = 0, data_counter = 0; //num為總數，counter為人的數目
 	std::cin >> data_num;
 
 	for(int i = 0; i < data_num; i++)
