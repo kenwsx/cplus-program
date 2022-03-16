@@ -1,29 +1,12 @@
-Not found:1
-Not found: 
-Not found:+
-counter:3
-max:-1
-Not found: 
-Not found:+
-counter:2
-max:3
-Not found:+
-Not found: 
-Not found:2
-counter:3
-max:3
-Not found: 
-Not found:2
-counter:2
-max:3
-Not found:2
-Not found: 
-Not found:=
-Not found:3
-counter:4
-max:4
-Not found:=
-Not found:3
-counter:2
-max:4
-4
+
+CCCCCCCCC
+CCCCCCCCC
+COOOOOOOC
+COCXCXCOC
+COCCXCXOC
+COOOOOOOC
+CCCCCCCCC
+CCCCCCCCC
+CCCCCCCCC
+
+white:71 black:4

@@ -1,28 +1,40 @@
 #include <iostream>
-#include <stdio.h>
-using namespace std;
+#include<cmath>
 
-class Test {
+class Point
+{
 public:
-    Test() {}
-    Test(const Test& t)
-    {
-        cout << "Copy constructor called " << endl;
-    }
+	float x, y;
+  Point &operator=(const Point& buf)
+  {
+    this->x = buf.x;
+    this->y = buf.y;
 
-    Test& operator=(const Test& t)
-    {
-        cout << "Assignment operator called " << endl;
-        return *this;
-    }
+    std::cout << "overload" << '\n';
+    return *this;
+  }
 };
 
-// Driver code
+class Segment
+{
+public:
+	Segment()
+	{
+	}
+	Segment(Point _a, Point _b)
+	{
+		a = _a;
+		b = _b;
+	}
+
+private:
+	Point a, b;
+};
 int main()
 {
-    Test t1, t2;
-    t2 = t1;
-    Test t3 = t1;
-    getchar();
+    double c = abs(-1*1.5);
+    std::cout << c << '\n';
+
+
     return 0;
 }

@@ -13,7 +13,7 @@ Person(Person &copy) //copy constructor
 	this->gene_type = copy.gene_type;
 }
 
-friend void add_data(std::string, std::string, Person *, int *);
+friend add_data(std::string, std::string, Person *, int *); //新增資料
 friend bool compare_name(Person, Person); //排序用途
 bool check_parent(); //檢查是否都有雙親
 void define_gene(); //決定基因
