@@ -48,7 +48,7 @@ bool container::reallocate(int size){
       new_box[i] = box[i];
     }
 
-    if(!box) //box exist
+    if(box) //box exist
       delete[] box;
     box = new_box;
     len = size;
@@ -64,10 +64,7 @@ void container::traversal(){
   {
     for(int i = 0;i <= index;i++)
     {
-      if(i == 0)
-        std::cout << box[i];
-      else
-        std::cout << " " << box[i];
+        std::cout << box[i] << " ";
     }
     std::cout << '\n';
   }
@@ -79,7 +76,7 @@ bool container::push(int data){
   {
     int reallo_size = 0;
     if(len == 0)
-      reallo_size = 2;
+      reallo_size = 1;
     else
       reallo_size = len * 2;
 
@@ -104,7 +101,7 @@ int container::pop(){
     {
       box[i] = box[i+1];
     }
-    box[index] = 0; //delete?
+    //box[index] = 0; //delete?
     index--;
     return output;
   }

@@ -32,7 +32,7 @@ private:
 };
 int main()
 {
-    double c = abs(-1*1.5);
+    double c = (double)1/2 * abs(-1*1.5);
     std::cout << c << '\n';
 
 
