@@ -1,4 +1,9 @@
 //新的問題，為什麼把內部new的東西刪除，會runtime error
+//線與點的距離：https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line
+//兩個線段相交：https://en.wikipedia.org/wiki/Line–line_intersection#cite_note-GGIII-2
+//三角形面積：https://en.wikipedia.org/wiki/Triangle#Using_coordinates
+
+
 #include<cmath>
 #include<iostream>
 
@@ -92,12 +97,6 @@ public:
           //如果沒有產生point，就代表沒有相交，不會產生三角形
           if(sect_data[0] == nullptr || sect_data[1] == nullptr || sect_data[2] == nullptr)
           {
-            //std::cout << "two line are parallel\n";
-            /*for(int i = 0;i <= 2;i++)
-            {
-              if(sect_data[i] != nullptr)
-                delete sect_data[i];
-            }*/
             return false;
           }
           //三點皆相同，不會產生三角形
@@ -105,13 +104,11 @@ public:
                   && sect_data[0]->y == sect_data[1]->y && sect_data[1]->y == sect_data[2]->y)
                   {
                     //std::cout << "three line intersect the same point\n";
-                    //delete [] &sect_data;
                     return false;
                   }
           else //構成一個三角形
           {
             //std::cout << "They exist a area\n";
-            //delete [] &sect_data;
             return true;
           }
         }
@@ -153,19 +150,12 @@ public:
             {
               //std::cout << "two line are parallel\n";
 
-              /*for(int i = 0;i <= 2;i++)
-              {
-                if(sect_data[i] != nullptr)
-                  delete sect_data[i];
-              }*/
-
               return 0.0;
             }
             else if(sect_data[0]->x == sect_data[1]->x && sect_data[1]->x == sect_data[2]->x
                     && sect_data[0]->y == sect_data[1]->y && sect_data[1]->y == sect_data[2]->y)
                     {
                       //std::cout << "three line intersect the same point\n";
-                      //delete [] &sect_data;
                       return 0.0;
                     }
             else //上方都做與isTriangle一樣的事
@@ -177,7 +167,6 @@ public:
 
               double result = (double)1/2 * abs((sect_data[0]->x-sect_data[2]->x)*(sect_data[1]->y-sect_data[0]->y)
                                   -(sect_data[0]->x-sect_data[1]->x)*(sect_data[2]->y-sect_data[0]->y));
-              //delete [] &sect_data;
               return result;
 
             }
